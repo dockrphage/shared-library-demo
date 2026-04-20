@@ -1,5 +1,5 @@
 // vars/utils.groovy
-import org.cwvj.Utils
+import org.ville.Utils
 
 def call() {
     return new Utils(this)
