@@ -4,10 +4,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Class-based shared library') {
+        stage('Class-based shared library with logging') {
             steps {
                 simpleEcho()
-                simpleEchoWithMessage("Calling class-based utilities")
+                simpleEchoWithMessage("Testing logging")
 
                 script {
                     utils().shout("hello from a class")
