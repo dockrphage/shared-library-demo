@@ -7,11 +7,12 @@ pipeline {
         stage('Class-based shared library') {
             steps {
                 simpleEcho()
-
                 simpleEchoWithMessage("Calling class-based utilities")
 
-                utils().shout("hello from a class")
-                utils().repeat("class method call", 2)
+                script {
+                    utils().shout("hello from a class")
+                    utils().repeat("class method call", 2)
+                }
             }
         }
     }
